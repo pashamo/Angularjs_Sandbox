@@ -3,8 +3,16 @@ import { Component } from '@angular/core';
 @Component({
     selector: 'app-server',
     template: `
-    <p [ngStyle]="{ backgroundColor: getColour() }">The ServerComponent - Server with id {{ serverID }} is {{ getServerStatus() }}</p>
-    `
+    <p 
+        [ngStyle]="{ backgroundColor: getColour() }"
+        [ngClass]="{ online: serverStatus === 'online'}">
+        The ServerComponent - Server with id {{ serverID }} is {{ getServerStatus() }}</p>
+    `,
+    styles: [`
+        .online {
+            color: white;
+        }
+    `]
 })
 
 export class ServerComponent {
