@@ -8,13 +8,12 @@
 <input 
     type="text" 
     class="form-control" 
-    [(ngModel)]="username" 
-    (input)="isUsernameEmpty()">
+    [(ngModel)]="username" >
 
 <p>Username: {{ username }}</p>
 
 <button 
     class="btn btn-primary" 
     (click)="resetUsername()" 
-    [disabled]="isEmpty">
+    [disabled]="username === ''">
     Reset</button>
