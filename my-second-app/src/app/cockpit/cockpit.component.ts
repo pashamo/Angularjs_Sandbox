@@ -9,25 +9,24 @@ import { Component, OnInit } from "@angular/core";
 export class CockpitComponent {
     newServerName: string;
     newServerContent: string;
-    serverElements: any[] = [];
 
     constructor() {}
 
     ngOnInit() {}
 
     onAddServer() {
-        this.serverElements.push({
-            "type": "server", 
-            "sname": this.newServerName,
-            "scontent": this.newServerContent
-        });
+        // this.serverElements.push({
+        //     "type": "server", 
+        //     "sname": this.newServerName,
+        //     "scontent": this.newServerContent
+        // });
     }
 
     onAddBlueprint() {
-        this.serverElements.push({
-            "type": "blueprint",
-            "sname": this.newServerName,
-            "scontent": this.newServerContent
-        });
+        // this.serverElements.push({
+        //     "type": "blueprint",
+        //     "sname": this.newServerName,
+        //     "scontent": this.newServerContent
+        // });
     }
 }

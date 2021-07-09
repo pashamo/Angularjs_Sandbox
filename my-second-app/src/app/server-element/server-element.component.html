@@ -1,11 +1,11 @@
 <div 
 class="panel"
-[ngClass]="server.type === 'server' ? 'panel-success' : 'panel-info'">
-  <div class="panel-heading">{{ server.sname }}</div>
+[ngClass]="element.type === 'server' ? 'panel-success' : 'panel-info'">
+  <div class="panel-heading">{{ element.sname }}</div>
   <div class="panel-body">
     <p>
-      <strong *ngIf="server.type === 'server'" style="color: red">{{ server.scontent }}</strong>
-      <em *ngIf="server.type === 'blueprint'">{{ server.scontent }}</em>
+      <strong *ngIf="element.type === 'server'" style="color: red">{{ element.scontent }}</strong>
+      <em *ngIf="element.type === 'blueprint'">{{ element.scontent }}</em>
     </p>
   </div>
 </div>
