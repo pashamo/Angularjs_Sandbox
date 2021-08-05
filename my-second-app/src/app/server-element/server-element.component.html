@@ -3,9 +3,10 @@ class="panel"
 [ngClass]="element.type === 'server' ? 'panel-success' : 'panel-info'">
   <div class="panel-heading">{{ element.sname }}</div>
   <div class="panel-body">
-    <p>
+    <ng-content></ng-content>
+    <!-- <p>
       <strong *ngIf="element.type === 'server'" style="color: red">{{ element.scontent }}</strong>
       <em *ngIf="element.type === 'blueprint'">{{ element.scontent }}</em>
-    </p>
+    </p> -->
   </div>
 </div>

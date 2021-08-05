@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   serverElements = [{type: 'server', sname: 'Testserver', scontent: 'Just a test!'}];
+  oddeveElements: {divisible: number, num: number}[] = [];
 
   onServerAdded(serverData: {serverName: string, serverContent: string}) {
         this.serverElements.push({
@@ -22,5 +23,9 @@ export class AppComponent {
             "sname": blueprintData.serverName,
             "scontent": blueprintData.serverContent
         });
+  }
+
+  onGen(controlData: {divisible: number, num: number}) {
+    this.oddeveElements.push(controlData);
   }
 }
